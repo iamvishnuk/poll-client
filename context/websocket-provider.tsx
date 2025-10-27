@@ -76,7 +76,7 @@ interface WebSocketProviderProps {
 
 export const WebSocketProvider: React.FC<WebSocketProviderProps> = ({
   children,
-  baseUrl = 'ws://localhost:8000'
+  baseUrl = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'ws://localhost:8000'
 }) => {
   const [isConnectedToPoll, setIsConnectedToPoll] = useState(false);
   const [isConnectedToGeneral, setIsConnectedToGeneral] = useState(false);

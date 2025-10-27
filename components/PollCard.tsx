@@ -101,14 +101,6 @@ const PollCard = ({ poll, showVoting = true }: Props) => {
           <h2 className='text-foreground text-xl font-bold'>
             {currentPoll.question}
           </h2>
-          {isConnectedToPoll && (
-            <div className='flex items-center gap-2'>
-              <div className='h-2 w-2 animate-pulse rounded-full bg-green-500'></div>
-              <span className='text-muted-foreground text-xs'>
-                {connectionCount} watching
-              </span>
-            </div>
-          )}
         </div>
         {currentPoll.description && (
           <p className='text-muted-foreground mt-1 text-sm'>
